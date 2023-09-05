@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Example</title>
+    <style>
+      body {
+        margin: 1rem;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column; /* To stack the table and grid vertically */
+        align-items: center;
+      }
+
+      .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      table {
+        border: black 1px solid;
+        width: 90%;
+        border-collapse: separate;
+        border-spacing: 10px;
+        background-color: turquoise;
+        border-radius: 20px;
+      }
+
+      th,
+      td {
+        text-align: center;
+        padding: 3px;
+        width: 30%;
+        border: black 1px solid;
+        border-radius: 20px;
+        background-color: turquoise;
+      }
+
+      .grid {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-gap: 10px;
+      }
+
+      .rectangle {
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgb(104, 162, 17);
+        box-sizing: border-box;
+      }
+
+      .rectangle1 {
+        border-radius: 0;
+      }
+
+      .rectangle2 {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .rectangle3 {
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+      }
+
+      .rectangle4 {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 0;
+      }
+
+      .rectangle5 {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 70px;
+      }
+
+      .rectangle6 {
+        border-radius: 10px 30px 50px 70px;
+      }
+
+      .rectangle7 {
+        border-radius: 10px 10px 30px 30px;
+      }
+
+      .rectangle8 {
+        border-radius: 20px 20px 0 0;
+      }
+
+      .rectangle9 {
+        border-radius: 0 0 20px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Steve</td>
+            <td>Smith</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Jill</td>
+            <td>Jackson</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>34</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="grid">
+        <div class="rectangle rectangle1"></div>
+        <div class="rectangle rectangle2"></div>
+        <div class="rectangle rectangle3"></div>
+        <div class="rectangle rectangle4"></div>
+        <div class="rectangle rectangle5"></div>
+        <div class="rectangle rectangle6"></div>
+        <div class="rectangle rectangle7"></div>
+        <div class="rectangle rectangle8"></div>
+        <div class="rectangle rectangle9"></div>
+      </div>
+    </div>
+  </body>
+</html>
