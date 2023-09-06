@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      /* Style the form container */
+      .form-container {
+        max-width: 600px;
+
+        background-color: #67052a;
+      }
+
+      /* Create two columns */
+      .form-row {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+      }
+
+      /* Style labels and inputs */
+      .form-row label {
+        width: 20%; /* Adjust the width as needed */
+        text-align: left;
+        margin: 4px;
+        font-weight: 900;
+        color: white;
+      }
+
+      .form-row input[type="text"],
+      .form-row input[type="email"]
+      .form-row input[type="password"],
+      .form-row input[type="tel"]
+      /* .form-row input[type="radio"] */
+      .form-row textarea,
+      .form-row select,
+      .form-row input[type="number"] {
+        width: 50%;
+        padding: 4px;
+      }
+      .form-row input[type="submit"] {
+        width: 80%;
+        padding: 10px;
+        font-weight: bold;
+        font-size: larger;
+        margin: 20px auto;
+        border-style: none;
+        border-radius: 10px;
+      }
+      #container {
+        width: 50%;
+        background-color: rgb(141, 5, 62);
+
+        padding: 10px 130px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-container">
+        <br /><br />
+        <form action="submit.php" method="post">
+          <div class="form-row">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="your name"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your email"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other" />
+            <label for="other">Other</label>
+          </div>
+
+          <div class="form-row">
+            <label for="language">Language:</label>
+            <select id="language" name="language">
+              <option selected value="" disabled>Select your language</option>
+              <option value="english">English</option>
+              <option value="spanish">Hindi</option>
+              <option value="french">Spanish</option>
+              <option value="german">Bengali</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="zipcode">ZIP Code:</label>
+            <input type="text" id="zipcode" name="zipcode" />
+          </div>
+
+          <div class="form-row">
+            <label for="about">About:</label>
+            <textarea
+              id="about"
+              name="about"
+              rows="4"
+              cols="50"
+              placeholder="Write about yourself..."
+            ></textarea>
+          </div>
+          <div class="form-row">
+            <input type="submit" value="Register" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
